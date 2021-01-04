@@ -1,0 +1,149 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+
+<ContentPage
+    x:Class="VisualChallengePocketCastsApp.MainPage"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:VisualChallengePocketCastsApp;assembly=VisualChallengePocketCastsApp"
+    x:DataType="local:MainPage">
+    <Grid RowDefinitions="64,*,64,4,64" RowSpacing="0">
+        <!--  Navigation  -->
+        <StackLayout
+            Grid.Row="0"
+            Padding="16,8"
+            BackgroundColor="{StaticResource DarkGray}"
+            Orientation="Horizontal"
+            Spacing="16">
+            <Label
+                FontSize="22"
+                HorizontalOptions="StartAndExpand"
+                Text="Podcasts"
+                TextColor="White"
+                VerticalOptions="Center" />
+            <Image
+                Aspect="AspectFit"
+                HeightRequest="28"
+                HorizontalOptions="End"
+                Source="icon_search"
+                VerticalOptions="Center"
+                WidthRequest="28" />
+            <Image
+                Aspect="AspectFit"
+                HeightRequest="28"
+                HorizontalOptions="End"
+                Source="icon_more"
+                VerticalOptions="Center"
+                WidthRequest="28" />
+        </StackLayout>
+
+        <!--  Podcasts  -->
+        <CollectionView
+            Grid.Row="1"
+            ItemSizingStrategy="MeasureFirstItem"
+            BackgroundColor="LightGray"
+            ItemsSource="{Binding Podcasts}">
+            <CollectionView.ItemsLayout>
+                <GridItemsLayout
+                    HorizontalItemSpacing="0"
+                    Orientation="Vertical"
+                    Span="4"
+                    VerticalItemSpacing="0" />
+            </CollectionView.ItemsLayout>
+            <CollectionView.ItemTemplate>
+                <DataTemplate>
+                    <BoxView
+                        Color="{Binding .}"
+                        WidthRequest="102"
+                        HeightRequest="102" />
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+        </CollectionView>
+
+        <!--  Media Controls  -->
+        <StackLayout
+            Grid.Row="2"
+            Padding="8"
+            BackgroundColor="{StaticResource SecondaryOrangeDark}"
+            Orientation="Horizontal"
+            Spacing="16"
+            VerticalOptions="StartAndExpand">
+            <BoxView
+                CornerRadius="4"
+                HeightRequest="48"
+                HorizontalOptions="Start"
+                VerticalOptions="Center"
+                WidthRequest="48"
+                Color="White" />
+            <StackLayout
+                HorizontalOptions="CenterAndExpand"
+                Orientation="Horizontal"
+                Spacing="16"
+                VerticalOptions="Center">
+                <Image
+                    Aspect="AspectFit"
+                    HeightRequest="28"
+                    Source="icon_replay30"
+                    WidthRequest="28" />
+                <Image
+                    Aspect="AspectFit"
+                    HeightRequest="48"
+                    Source="icon_play"
+                    WidthRequest="48" />
+                <Image
+                    Aspect="AspectFit"
+                    HeightRequest="28"
+                    Source="icon_forward30"
+                    WidthRequest="28" />
+            </StackLayout>
+            <Image
+                Aspect="AspectFit"
+                HeightRequest="28"
+                Rotation="180"
+                Source="icon_nav_filters"
+                WidthRequest="28" />
+        </StackLayout>
+
+        <!--  Media Progress  -->
+        <ProgressBar
+            Grid.Row="3"
+            BackgroundColor="{StaticResource LightGray}"
+            Progress=".75"
+            ProgressColor="{StaticResource SecondaryOrange}" />
+
+        <!--  Navigation Bar  -->
+        <StackLayout
+            Grid.Row="4"
+            Padding="16,8"
+            BackgroundColor="{StaticResource DarkGray}"
+            Orientation="Horizontal">
+            <StackLayout HorizontalOptions="CenterAndExpand">
+                <Image Source="icon_nav_podcasts" />
+                <Label
+                    FontSize="14"
+                    Text="Podcasts"
+                    TextColor="White" />
+            </StackLayout>
+            <StackLayout HorizontalOptions="CenterAndExpand">
+                <Image Source="icon_nav_filters" />
+                <Label
+                    FontSize="14"
+                    Text="Filters"
+                    TextColor="{StaticResource LightGray}" />
+            </StackLayout>
+            <StackLayout HorizontalOptions="CenterAndExpand">
+                <Image Source="icon_nav_discover" />
+                <Label
+                    FontSize="14"
+                    Text="Discover"
+                    TextColor="{StaticResource LightGray}" />
+            </StackLayout>
+            <StackLayout HorizontalOptions="CenterAndExpand">
+                <Image Source="icon_nav_person" />
+                <Label
+                    FontSize="14"
+                    Text="Profile"
+                    TextColor="{StaticResource LightGray}" />
+            </StackLayout>
+        </StackLayout>
+    </Grid>
+</ContentPage>
