@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VisualChallengePocketCastsApp", "VisualChallengePocketCastsApp\VisualChallengePocketCastsApp\VisualChallengePocketCastsApp.csproj", "{6D34A56D-7C63-43C5-B00F-FC3D3CC7D683}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VisualChallengePocketCastsApp.Android", "VisualChallengePocketCastsApp\VisualChallengePocketCastsApp.Android\VisualChallengePocketCastsApp.Android.csproj", "{8B58A29B-93D5-4053-A5D2-F3042E7C57D6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VisualChallengePocketCastsApp.iOS", "VisualChallengePocketCastsApp\VisualChallengePocketCastsApp.iOS\VisualChallengePocketCastsApp.iOS.csproj", "{A91400B1-9D8F-4FB8-8955-27AF44A4BEAE}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{6D34A56D-7C63-43C5-B00F-FC3D3CC7D683}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6D34A56D-7C63-43C5-B00F-FC3D3CC7D683}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6D34A56D-7C63-43C5-B00F-FC3D3CC7D683}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6D34A56D-7C63-43C5-B00F-FC3D3CC7D683}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8B58A29B-93D5-4053-A5D2-F3042E7C57D6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8B58A29B-93D5-4053-A5D2-F3042E7C57D6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8B58A29B-93D5-4053-A5D2-F3042E7C57D6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8B58A29B-93D5-4053-A5D2-F3042E7C57D6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A91400B1-9D8F-4FB8-8955-27AF44A4BEAE}.Debug|Any CPU.ActiveCfg = Debug|iPhoneSimulator
+		{A91400B1-9D8F-4FB8-8955-27AF44A4BEAE}.Debug|Any CPU.Build.0 = Debug|iPhoneSimulator
+		{A91400B1-9D8F-4FB8-8955-27AF44A4BEAE}.Release|Any CPU.ActiveCfg = Release|iPhoneSimulator
+		{A91400B1-9D8F-4FB8-8955-27AF44A4BEAE}.Release|Any CPU.Build.0 = Release|iPhoneSimulator
+	EndGlobalSection
+EndGlobal
