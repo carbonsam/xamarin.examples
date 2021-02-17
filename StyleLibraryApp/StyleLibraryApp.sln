@@ -6,6 +6,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StyleLibraryApp.Android", "
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StyleLibraryApp.iOS", "StyleLibraryApp\StyleLibraryApp.iOS\StyleLibraryApp.iOS.csproj", "{231F0F26-F286-459B-849C-EFFE1A73F123}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StyleBase", "StyleBase\StyleBase.csproj", "{908B708C-CBE6-485E-AB75-3DC95D78029B}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Ad-Hoc|iPhone = Ad-Hoc|iPhone
@@ -82,5 +84,21 @@ Global
 		{231F0F26-F286-459B-849C-EFFE1A73F123}.Release|iPhoneSimulator.ActiveCfg = Release|iPhoneSimulator
 		{231F0F26-F286-459B-849C-EFFE1A73F123}.Release|iPhoneSimulator.Build.0 = Release|iPhoneSimulator
 		{231F0F26-F286-459B-849C-EFFE1A73F123}.Release|iPhoneSimulator.Deploy.0 = Release|iPhoneSimulator
+		{908B708C-CBE6-485E-AB75-3DC95D78029B}.Ad-Hoc|iPhone.ActiveCfg = Debug|Any CPU
+		{908B708C-CBE6-485E-AB75-3DC95D78029B}.Ad-Hoc|iPhone.Build.0 = Debug|Any CPU
+		{908B708C-CBE6-485E-AB75-3DC95D78029B}.AppStore|iPhone.ActiveCfg = Debug|Any CPU
+		{908B708C-CBE6-485E-AB75-3DC95D78029B}.AppStore|iPhone.Build.0 = Debug|Any CPU
+		{908B708C-CBE6-485E-AB75-3DC95D78029B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{908B708C-CBE6-485E-AB75-3DC95D78029B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{908B708C-CBE6-485E-AB75-3DC95D78029B}.Debug|iPhone.ActiveCfg = Debug|Any CPU
+		{908B708C-CBE6-485E-AB75-3DC95D78029B}.Debug|iPhone.Build.0 = Debug|Any CPU
+		{908B708C-CBE6-485E-AB75-3DC95D78029B}.Debug|iPhoneSimulator.ActiveCfg = Debug|Any CPU
+		{908B708C-CBE6-485E-AB75-3DC95D78029B}.Debug|iPhoneSimulator.Build.0 = Debug|Any CPU
+		{908B708C-CBE6-485E-AB75-3DC95D78029B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{908B708C-CBE6-485E-AB75-3DC95D78029B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{908B708C-CBE6-485E-AB75-3DC95D78029B}.Release|iPhone.ActiveCfg = Release|Any CPU
+		{908B708C-CBE6-485E-AB75-3DC95D78029B}.Release|iPhone.Build.0 = Release|Any CPU
+		{908B708C-CBE6-485E-AB75-3DC95D78029B}.Release|iPhoneSimulator.ActiveCfg = Release|Any CPU
+		{908B708C-CBE6-485E-AB75-3DC95D78029B}.Release|iPhoneSimulator.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
