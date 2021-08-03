@@ -1,0 +1,73 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="CarouselBinding.FlowPage"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:toolkit="http://xamarin.com/schemas/2020/toolkit"
+    xmlns:viewModels="clr-namespace:CarouselBinding.Core.ViewModels;assembly=CarouselBinding.Core"
+    x:Name="ThisPage"
+    x:DataType="viewModels:FlowViewModel">
+
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <toolkit:EnumToIntConverter x:Key="EnumToIntConverter" />
+        </ResourceDictionary>
+    </ContentPage.Resources>
+
+    <Grid RowDefinitions="Auto,*,Auto">
+        <CarouselView
+            Grid.Row="0"
+            Grid.RowSpan="3"
+            IndicatorView="{x:Reference CarouselIndicatorView}"
+            IsSwipeEnabled="False"
+            ItemsSource="{Binding FlowItems, Source={x:Reference ThisPage}}"
+            Loop="False"
+            Position="{Binding CurrentStep, Converter={StaticResource EnumToIntConverter}}">
+            <CarouselView.ItemTemplate>
+                <DataTemplate x:DataType="ContentView">
+                    <Frame
+                        Padding="0"
+                        CornerRadius="0"
+                        HasShadow="False">
+                        <ContentView Content="{Binding Content}" />
+                    </Frame>
+                </DataTemplate>
+            </CarouselView.ItemTemplate>
+        </CarouselView>
+
+        <IndicatorView
+            x:Name="CarouselIndicatorView"
+            Grid.Row="0"
+            toolkit:SafeAreaEffect.SafeArea="false,true,false,false"
+            HorizontalOptions="Center"
+            IndicatorColor="Black"
+            SelectedIndicatorColor="White" />
+
+        <StackLayout
+            Grid.Row="2"
+            Padding="16,0"
+            toolkit:SafeAreaEffect.SafeArea="false,false,false,true"
+            Orientation="Horizontal"
+            Spacing="16">
+            <Button
+                BackgroundColor="White"
+                Clicked="OnPreviousButtonTapped"
+                CornerRadius="28"
+                FontSize="18"
+                HeightRequest="56"
+                HorizontalOptions="FillAndExpand"
+                Text="Previous"
+                TextColor="Black" />
+            <Button
+                BackgroundColor="White"
+                Clicked="OnNextButtonTapped"
+                CornerRadius="28"
+                FontSize="18"
+                HeightRequest="56"
+                HorizontalOptions="FillAndExpand"
+                Text="Next"
+                TextColor="Black" />
+        </StackLayout>
+    </Grid>
+
+</ContentPage>
