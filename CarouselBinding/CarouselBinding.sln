@@ -6,6 +6,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CarouselBinding.Android", "
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CarouselBinding.iOS", "CarouselBinding.iOS\CarouselBinding.iOS.csproj", "{6E43523C-8FD3-4AEF-BC05-B493D83B90C9}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CarouselBinding.Core", "CarouselBinding.Core\CarouselBinding.Core.csproj", "{F93E8290-9E03-48CD-B3BF-ACBA11E1C11F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Ad-Hoc|iPhone = Ad-Hoc|iPhone
@@ -82,5 +84,21 @@ Global
 		{6E43523C-8FD3-4AEF-BC05-B493D83B90C9}.Release|iPhoneSimulator.ActiveCfg = Release|iPhoneSimulator
 		{6E43523C-8FD3-4AEF-BC05-B493D83B90C9}.Release|iPhoneSimulator.Build.0 = Release|iPhoneSimulator
 		{6E43523C-8FD3-4AEF-BC05-B493D83B90C9}.Release|iPhoneSimulator.Deploy.0 = Release|iPhoneSimulator
+		{F93E8290-9E03-48CD-B3BF-ACBA11E1C11F}.Ad-Hoc|iPhone.ActiveCfg = Debug|Any CPU
+		{F93E8290-9E03-48CD-B3BF-ACBA11E1C11F}.Ad-Hoc|iPhone.Build.0 = Debug|Any CPU
+		{F93E8290-9E03-48CD-B3BF-ACBA11E1C11F}.AppStore|iPhone.ActiveCfg = Debug|Any CPU
+		{F93E8290-9E03-48CD-B3BF-ACBA11E1C11F}.AppStore|iPhone.Build.0 = Debug|Any CPU
+		{F93E8290-9E03-48CD-B3BF-ACBA11E1C11F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F93E8290-9E03-48CD-B3BF-ACBA11E1C11F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F93E8290-9E03-48CD-B3BF-ACBA11E1C11F}.Debug|iPhone.ActiveCfg = Debug|Any CPU
+		{F93E8290-9E03-48CD-B3BF-ACBA11E1C11F}.Debug|iPhone.Build.0 = Debug|Any CPU
+		{F93E8290-9E03-48CD-B3BF-ACBA11E1C11F}.Debug|iPhoneSimulator.ActiveCfg = Debug|Any CPU
+		{F93E8290-9E03-48CD-B3BF-ACBA11E1C11F}.Debug|iPhoneSimulator.Build.0 = Debug|Any CPU
+		{F93E8290-9E03-48CD-B3BF-ACBA11E1C11F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F93E8290-9E03-48CD-B3BF-ACBA11E1C11F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F93E8290-9E03-48CD-B3BF-ACBA11E1C11F}.Release|iPhone.ActiveCfg = Release|Any CPU
+		{F93E8290-9E03-48CD-B3BF-ACBA11E1C11F}.Release|iPhone.Build.0 = Release|Any CPU
+		{F93E8290-9E03-48CD-B3BF-ACBA11E1C11F}.Release|iPhoneSimulator.ActiveCfg = Release|Any CPU
+		{F93E8290-9E03-48CD-B3BF-ACBA11E1C11F}.Release|iPhoneSimulator.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

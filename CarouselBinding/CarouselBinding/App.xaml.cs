@@ -1,4 +1,5 @@
-﻿using System;
+﻿using CarouselBinding.Core.Models;
+using CarouselBinding.Core.ViewModels;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -12,22 +13,19 @@ namespace CarouselBinding
         {
             InitializeComponent();
 
-            MainPage = new MainPage();
+            MainPage = new FlowPage(new FlowViewModel(new Flow()));
         }
 
         protected override void OnStart()
         {
-            // Handle when your app starts
         }
 
         protected override void OnSleep()
         {
-            // Handle when your app sleeps
         }
 
         protected override void OnResume()
         {
-            // Handle when your app resumes
         }
     }
 }
