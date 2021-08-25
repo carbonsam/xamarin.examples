@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+
+<ContentPage
+    x:Class="ShellExample.Pages.SignInPage"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    BackgroundColor="SeaGreen">
+
+    <StackLayout>
+        <StackLayout HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand">
+            <Label
+                FontAttributes="Bold"
+                FontSize="32"
+                Text="Sign In"
+                TextColor="White" />
+            <Button
+                BackgroundColor="White"
+                Clicked="SignInButtonOnClicked"
+                Text="Authenticate"
+                TextColor="SeaGreen" />
+        </StackLayout>
+    </StackLayout>
+</ContentPage>

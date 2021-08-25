@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+
+<ContentPage
+    x:Class="ShellExample.Pages.DashboardProfilePage"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    Title="Profile"
+    BackgroundColor="RosyBrown"
+    Shell.NavBarIsVisible="True"
+    Shell.TabBarIsVisible="True">
+
+    <StackLayout>
+        <StackLayout
+            HorizontalOptions="CenterAndExpand"
+            Spacing="32"
+            VerticalOptions="CenterAndExpand">
+            <Label
+                FontAttributes="Bold"
+                FontSize="32"
+                Text="Profile"
+                TextColor="White" />
+            <Button
+                BackgroundColor="White"
+                Clicked="SettingsButtonOnClicked"
+                Text="Settings (old school navigation push)"
+                TextColor="RosyBrown" />
+            <Button
+                BackgroundColor="White"
+                Clicked="SignOutButtonOnClicked"
+                Text="Sign Out"
+                TextColor="RosyBrown" />
+        </StackLayout>
+    </StackLayout>
+</ContentPage>

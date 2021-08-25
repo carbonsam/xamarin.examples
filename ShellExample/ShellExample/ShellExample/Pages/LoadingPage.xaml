@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+
+<ContentPage
+    x:Class="ShellExample.Pages.LoadingPage"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    BackgroundColor="RoyalBlue">
+
+    <StackLayout>
+        <Label
+            FontAttributes="Bold"
+            FontSize="32"
+            HorizontalOptions="CenterAndExpand"
+            Text="Loading..."
+            TextColor="White"
+            VerticalOptions="CenterAndExpand" />
+    </StackLayout>
+</ContentPage>

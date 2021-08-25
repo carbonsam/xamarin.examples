@@ -10,6 +10,34 @@
     </PropertyGroup>
 
     <ItemGroup>
+        <PackageReference Include="Xamarin.CommunityToolkit" Version="1.2.0" />
         <PackageReference Include="Xamarin.Forms" Version="5.0.0.2012" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <Compile Update="Pages\SignInPage.xaml.cs">
+        <DependentUpon>SignInPage.xaml</DependentUpon>
+        <SubType>Code</SubType>
+      </Compile>
+      <Compile Update="Pages\DashboardHomePage.xaml.cs">
+        <DependentUpon>DashboardHomePage.xaml</DependentUpon>
+        <SubType>Code</SubType>
+      </Compile>
+      <Compile Update="Pages\DashboardFeedPage.xaml.cs">
+        <DependentUpon>DashboardFeedPage.xaml</DependentUpon>
+        <SubType>Code</SubType>
+      </Compile>
+      <Compile Update="Pages\DashboardProfilePage.xaml.cs">
+        <DependentUpon>DashboardProfilePage.xaml</DependentUpon>
+        <SubType>Code</SubType>
+      </Compile>
+      <Compile Update="Pages\SettingsPage.xaml.cs">
+        <DependentUpon>SettingsPage.xaml</DependentUpon>
+        <SubType>Code</SubType>
+      </Compile>
+      <Compile Update="Pages\HelloPage.xaml.cs">
+        <DependentUpon>HelloPage.xaml</DependentUpon>
+        <SubType>Code</SubType>
+      </Compile>
     </ItemGroup>
 </Project>
