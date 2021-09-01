@@ -8,29 +8,22 @@
     x:Name="ThisPage"
     x:DataType="viewModels:FlowViewModel">
 
-    <ContentPage.Resources>
-        <ResourceDictionary>
-            <toolkit:EnumToIntConverter x:Key="EnumToIntConverter" />
-        </ResourceDictionary>
-    </ContentPage.Resources>
-
     <Grid RowDefinitions="Auto,*,Auto">
         <CarouselView
             Grid.Row="0"
             Grid.RowSpan="3"
             IndicatorView="{x:Reference CarouselIndicatorView}"
             IsSwipeEnabled="False"
-            ItemsSource="{Binding FlowItems, Source={x:Reference ThisPage}}"
+            ItemsSource="{Binding FlowViews, Source={x:Reference ThisPage}}"
             Loop="False"
-            Position="{Binding CurrentStep, Converter={StaticResource EnumToIntConverter}}">
+            Position="{Binding Position}">
             <CarouselView.ItemTemplate>
                 <DataTemplate x:DataType="ContentView">
                     <Frame
                         Padding="0"
+                        Content="{Binding Content}"
                         CornerRadius="0"
-                        HasShadow="False">
-                        <ContentView Content="{Binding Content}" />
-                    </Frame>
+                        HasShadow="False" />
                 </DataTemplate>
             </CarouselView.ItemTemplate>
         </CarouselView>
@@ -43,13 +36,13 @@
             IndicatorColor="Black"
             SelectedIndicatorColor="White" />
 
-        <StackLayout
+        <Grid
             Grid.Row="2"
             Padding="16,0"
             toolkit:SafeAreaEffect.SafeArea="false,false,false,true"
-            Orientation="Horizontal"
-            Spacing="16">
+            RowSpacing="16">
             <Button
+                Grid.Column="0"
                 BackgroundColor="White"
                 Clicked="OnPreviousButtonTapped"
                 CornerRadius="28"
@@ -59,6 +52,7 @@
                 Text="Previous"
                 TextColor="Black" />
             <Button
+                Grid.Column="1"
                 BackgroundColor="White"
                 Clicked="OnNextButtonTapped"
                 CornerRadius="28"
@@ -67,7 +61,29 @@
                 HorizontalOptions="FillAndExpand"
                 Text="Next"
                 TextColor="Black" />
-        </StackLayout>
+            <Button
+                Grid.Row="1"
+                Grid.Column="0"
+                BackgroundColor="White"
+                Clicked="OnRemoveButtonTapped"
+                CornerRadius="28"
+                FontSize="18"
+                HeightRequest="56"
+                HorizontalOptions="FillAndExpand"
+                Text="Remove from End"
+                TextColor="Red" />
+            <Button
+                Grid.Row="1"
+                Grid.Column="1"
+                BackgroundColor="White"
+                Clicked="OnAddButtonTapped"
+                CornerRadius="28"
+                FontSize="18"
+                HeightRequest="56"
+                HorizontalOptions="FillAndExpand"
+                Text="Add to End"
+                TextColor="Green" />
+        </Grid>
     </Grid>
 
 </ContentPage>
