@@ -1,3 +1,4 @@
+using System.Threading;
 using System.Threading.Tasks;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
@@ -12,11 +13,17 @@ namespace ShellExample.Pages
             InitializeComponent();
         }
 
-        protected override async void OnAppearing()
+        protected override void OnAppearing()
         {
             // Emulate long startup process
-            await Task.Delay(5000);
-            await Shell.Current.GoToAsync($"//{AppRoutes.SignInPage}");
+            Task.Run(() =>
+            {
+                Thread.Sleep(5000);
+                Device.BeginInvokeOnMainThread(async () =>
+                {
+                    await Shell.Current.GoToAsync($"//{AppRoutes.SignInPage}");
+                });
+            });
         }
     }
 }
