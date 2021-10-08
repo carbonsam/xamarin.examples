@@ -4,7 +4,6 @@ namespace ShellExample
     {
         public const string LoadingPage = "loading";
         public const string SignInPage = "signin";
-
         public const string DashboardPage = "dashboard";
     }
 }

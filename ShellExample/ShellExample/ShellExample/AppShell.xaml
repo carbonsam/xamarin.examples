@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+
+<Shell
+    x:Class="ShellExample.AppShell"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:pages="clr-namespace:ShellExample.Pages;assembly=ShellExample"
+    xmlns:shellExample="clr-namespace:ShellExample;assembly=ShellExample"
+    FlyoutBehavior="Disabled"
+    NavBarIsVisible="False"
+    TabBarIsVisible="False">
+    <FlyoutItem Route="{x:Static shellExample:AppRoutes.LoadingPage}">
+        <ShellContent ContentTemplate="{DataTemplate pages:LoadingPage}" />
+    </FlyoutItem>
+
+    <FlyoutItem Route="{x:Static shellExample:AppRoutes.SignInPage}">
+        <ShellContent ContentTemplate="{DataTemplate pages:SignInPage}" />
+    </FlyoutItem>
+
+    <FlyoutItem Route="{x:Static shellExample:AppRoutes.DashboardPage}">
+        <!-- <TabBar Route="{x:Static shellExample:AppRoutes.DashboardPage}"> -->
+        <Tab Title="Home">
+            <ShellContent ContentTemplate="{DataTemplate pages:DashboardHomePage}" />
+        </Tab>
+        <Tab Title="Feed">
+            <ShellContent ContentTemplate="{DataTemplate pages:DashboardFeedPage}" />
+        </Tab>
+        <Tab Title="Profile">
+            <ShellContent ContentTemplate="{DataTemplate pages:DashboardProfilePage}" />
+        </Tab>
+        <!-- </TabBar> -->
+    </FlyoutItem>
+</Shell>
