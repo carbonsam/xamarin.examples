@@ -1,8 +1,20 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
-<Application xmlns="http://xamarin.com/schemas/2014/forms"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="ShellExample.App">
+<Application
+    x:Class="ShellExample.App"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml">
     <Application.Resources>
-
+        <!--  Shell Styles  -->
+        <Style TargetType="TabBar">
+            <Setter Property="Shell.BackgroundColor" Value="Black" />
+            <Setter Property="Shell.ForegroundColor" Value="White" />
+            <Setter Property="Shell.TitleColor" Value="White" />
+            <Setter Property="Shell.DisabledColor" Value="LightGray" />
+            <Setter Property="Shell.UnselectedColor" Value="DarkGray" />
+            <Setter Property="Shell.TabBarBackgroundColor" Value="White" />
+            <Setter Property="Shell.TabBarForegroundColor" Value="DodgerBlue" />
+            <Setter Property="Shell.TabBarUnselectedColor" Value="LightGray" />
+            <Setter Property="Shell.TabBarTitleColor" Value="DodgerBlue" />
+        </Style>
     </Application.Resources>
 </Application>

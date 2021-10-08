@@ -15,6 +15,7 @@ namespace ShellExample.Pages
         private async void SettingsButtonOnClicked(object sender, EventArgs e)
         {
             // NOTE: You might think we can do this, but we can't (since we're inside a TabBar)
+            // and relative routing is not allowed in that context.
             // await Shell.Current.GoToAsync($"/{AppRoutes.SettingsPage}");
 
             await Shell.Current.Navigation.PushAsync(new SettingsPage());

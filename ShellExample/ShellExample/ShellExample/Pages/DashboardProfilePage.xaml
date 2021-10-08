@@ -17,6 +17,7 @@
             <Label
                 FontAttributes="Bold"
                 FontSize="32"
+                HorizontalOptions="CenterAndExpand"
                 Text="Profile"
                 TextColor="White" />
             <Button
