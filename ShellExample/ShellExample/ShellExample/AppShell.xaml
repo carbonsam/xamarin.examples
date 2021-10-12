@@ -6,28 +6,32 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     xmlns:pages="clr-namespace:ShellExample.Pages;assembly=ShellExample"
     xmlns:shellExample="clr-namespace:ShellExample;assembly=ShellExample"
+    BackgroundColor="White"
     FlyoutBehavior="Disabled"
-    NavBarIsVisible="False"
-    TabBarIsVisible="False">
-    <FlyoutItem Route="{x:Static shellExample:AppRoutes.LoadingPage}">
-        <ShellContent ContentTemplate="{DataTemplate pages:LoadingPage}" />
-    </FlyoutItem>
+    NavBarIsVisible="False">
 
-    <FlyoutItem Route="{x:Static shellExample:AppRoutes.SignInPage}">
-        <ShellContent ContentTemplate="{DataTemplate pages:SignInPage}" />
-    </FlyoutItem>
+    <Shell.Resources>
+        <Style TargetType="TabBar">
+            <Setter Property="Shell.BackgroundColor" Value="White" />
+            <Setter Property="Shell.ForegroundColor" Value="Black" />
+            <Setter Property="Shell.TitleColor" Value="Black" />
+            <Setter Property="Shell.DisabledColor" Value="LightGray" />
+            <Setter Property="Shell.UnselectedColor" Value="DarkGray" />
+            <Setter Property="Shell.TabBarBackgroundColor" Value="White" />
+            <Setter Property="Shell.TabBarForegroundColor" Value="DodgerBlue" />
+            <Setter Property="Shell.TabBarUnselectedColor" Value="Gray" />
+            <Setter Property="Shell.TabBarTitleColor" Value="DodgerBlue" />
+        </Style>
+    </Shell.Resources>
 
-    <FlyoutItem Route="{x:Static shellExample:AppRoutes.DashboardPage}">
-        <!-- <TabBar Route="{x:Static shellExample:AppRoutes.DashboardPage}"> -->
-        <Tab Title="Home">
-            <ShellContent ContentTemplate="{DataTemplate pages:DashboardHomePage}" />
-        </Tab>
-        <Tab Title="Feed">
-            <ShellContent ContentTemplate="{DataTemplate pages:DashboardFeedPage}" />
-        </Tab>
-        <Tab Title="Profile">
-            <ShellContent ContentTemplate="{DataTemplate pages:DashboardProfilePage}" />
-        </Tab>
-        <!-- </TabBar> -->
-    </FlyoutItem>
+    <!--  NOTE: Order matters: make sure LoadingPage is defined first  -->
+    <ShellContent ContentTemplate="{DataTemplate pages:LoadingPage}" Route="{x:Static shellExample:AppRoutes.LoadingPage}" />
+
+    <ShellContent ContentTemplate="{DataTemplate pages:SignInPage}" Route="{x:Static shellExample:AppRoutes.SignInPage}" />
+
+    <TabBar Route="{x:Static shellExample:AppRoutes.DashboardPage}">
+        <ShellContent Title="Home" ContentTemplate="{DataTemplate pages:DashboardHomePage}" />
+        <ShellContent Title="Feed" ContentTemplate="{DataTemplate pages:DashboardFeedPage}" />
+        <ShellContent Title="Profile" ContentTemplate="{DataTemplate pages:DashboardProfilePage}" />
+    </TabBar>
 </Shell>

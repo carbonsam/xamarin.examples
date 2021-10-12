@@ -21,8 +21,9 @@ namespace ShellExample.Pages
             }
             hasModalBeenPresented = true;
             
-            // TODO: Can we navigate to a modal from a TabItem?
+            // NOTE: Can we navigate to a modal from a TabItem? NOPE
             // await Shell.Current.GoToAsync($"{AppRoutes.HelloPage}");
+            
             await Shell.Current.Navigation.PushAsync(new HelloPage());
         }
     }
